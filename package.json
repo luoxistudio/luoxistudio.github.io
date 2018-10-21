@@ -1,0 +1,34 @@
+{
+  "name": "luoxistudio.github.io",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "normalize.css": "^8.0.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-scripts": "2.0.5",
+    "typewriter-effect": "^2.4.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "push": "gh-pages -b master -d build -m 'Production build updates'",
+    "deploy": "npm run build && npm run push",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.9.4"
+  },
+  "homepage": "https://luoxistudio.github.io"
+}

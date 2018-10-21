@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+// *********************
+// *** Normalize CSS ***
+// *********************
+
+@import "~normalize.css/normalize.css"; 
+
+// ************************
+// *** Global Variables ***
+// ************************
+
+
+// *********************
+// *** Global Styles ***
+// *********************
+
+*, *::before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+// ******************
+// *** Typography *** 
+// ******************
+
+
+// ******************
+// ***   Layout   ***
+// ******************
+
+@mixin bp-large {
+    @media only screen and (min-width: 2160px) {
+        @content;
+    }
+}
+
+@mixin bp-medium {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin bp-small {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin bp-ex-small {
+    @media only screen and (min-width: 480px) {
+        @content;
+    }
+}
+
+// **********************
+// *** App Components ***
+// **********************
+
+@import "./components/App/App";
