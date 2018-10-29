@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+.Header{
+    height: 120px;
+    padding: $page-padding-sm;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    @include bp-small{
+        height: 160px;
+        padding: $page-padding-md;
+    }
+    @include bp-medium{
+        height: 200px;
+        padding: $page-padding-lg;
+    }
+    &__logo{
+        width: 80px;
+        @include bp-small{
+            width: 150px;
+        }
+        @include bp-medium{
+            width: 180px;
+        }
+    }
+    &__icon-group{
+        display: none;
+        @include bp-small{
+            display: block;
+        }
+    }
+    &__icon-link{
+        display: inline-block;
+        margin-left: 15px;
+    }
+}

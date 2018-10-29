@@ -10,6 +10,7 @@
 // *** Global Variables ***
 // ************************
 
+$gray: #9B9B9B;
 
 // *********************
 // *** Global Styles ***
@@ -31,6 +32,10 @@ html {
 // ******************
 // ***   Layout   ***
 // ******************
+
+$page-padding-sm: 20px;
+$page-padding-md: 40px;
+$page-padding-lg: 60px;
 
 @mixin bp-large {
     @media only screen and (min-width: 2160px) {
@@ -57,7 +62,17 @@ html {
 }
 
 // **********************
+// *** Global Modules ***
+// **********************
+
+@import "./styles/animation";
+
+// **********************
 // *** App Components ***
 // **********************
 
+@import "./components/Logo/Logo";
+@import "./components/Icon/Icon";
+
 @import "./components/App/App";
+@import "./components/Header/Header";
