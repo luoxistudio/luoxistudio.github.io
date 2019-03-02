@@ -1,21 +1,24 @@
 @charset "utf-8";
 
 .Header{
-    height: 120px;
-    padding: $page-padding-sm;
+    padding: 30px 0 $page-padding-sm;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    @include bp-small{
-        height: 160px;
-        padding: $page-padding-md;
+    flex-direction: column-reverse;
+    align-items: center;
+    @include bp-ex-small{
+        padding: $page-padding-md 0;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
     }
     @include bp-medium{
-        height: 200px;
-        padding: $page-padding-lg;
+        padding: $page-padding-lg 0;
     }
     &__logo{
-        width: 80px;
+        width: 120px;
+        @include bp-ex-small{
+            width: 120px;
+        }
         @include bp-small{
             width: 150px;
         }
@@ -24,13 +27,36 @@
         }
     }
     &__icon-group{
-        display: none;
-        @include bp-small{
-            display: block;
-        }
+        
+        
     }
     &__icon-link{
-        display: inline-block;
+        display: none;
         margin-left: 15px;
+        @include bp-ex-small{
+            display: inline-block;
+            margin-left: 15px;
+        }
     }
+    &__menu{
+        display: none;
+        cursor: pointer;
+        &>span{
+            display: block;
+            width: 24px;
+            height: 2px;
+            margin-bottom: 6px;
+            position: relative;
+            background: black;
+            border-radius: 3px;
+        }
+        @include bp-ex-small{
+            display: none;
+        }
+    }
+}
+
+.modal-open .Header{
+    transition: filter .3s ease;
+    filter: blur(3px);
 }

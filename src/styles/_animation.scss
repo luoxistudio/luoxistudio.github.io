@@ -18,6 +18,17 @@
 	}
  }
 
+
+@keyframes scaleUp {
+	from { }
+	to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes moveUp {
+	from { }
+	to { transform: translateY(0); opacity: 1; }
+}
+
  @keyframes fadeInDown {
 	from {
 	  opacity: 0;
