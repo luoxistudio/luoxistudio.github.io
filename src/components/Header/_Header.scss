@@ -26,16 +26,10 @@
             width: 180px;
         }
     }
-    &__icon-group{
-        
-        
-    }
-    &__icon-link{
+    &__contact{
         display: none;
-        margin-left: 15px;
         @include bp-ex-small{
-            display: inline-block;
-            margin-left: 15px;
+            display: inline-flex;
         }
     }
     &__menu{

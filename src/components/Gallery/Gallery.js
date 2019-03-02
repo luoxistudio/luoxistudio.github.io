@@ -64,7 +64,8 @@ class Gallery extends Component {
     }
 
     previewImage(event){
-        let image = event.target.cloneNode(true), origin = event.target.getBoundingClientRect();
+        let image = event.target.cloneNode(true);
+        // let origin = event.target.getBoundingClientRect();
         // image.style.width = origin.width+'px';
         // image.style.height = origin.height+'px';
         // image.style.top = origin.top+'px';

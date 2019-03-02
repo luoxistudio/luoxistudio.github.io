@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+.Contact{
+    display: inline-flex;
+    &__icon-link + &__icon-link{
+        margin-left: 10px;
+    }
+}
