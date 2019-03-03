@@ -8,9 +8,9 @@ class Contact extends Component {
 		return (
             <div className={classes}>
                 <a className="Contact__icon-link" href="https://www.weibo.com/jeezu" target="_blank" rel="noopener noreferrer"><Icon iconName="weibo" /></a>
-                <a className="Contact__icon-link" href="javascript:void();"><Icon iconName="wechat" /></a>
-                <a className="Contact__icon-link" href="javascript:void();"><Icon iconName="instagram" /></a>
-                <a className="Contact__icon-link" href="mailto:luoxistudio@gmail.com" target="_blank" rel="noopener noreferrer"><Icon iconName="email" /></a>
+                {/* <a className="Contact__icon-link" href="javascript:void();"><Icon iconName="wechat" /></a>
+                <a className="Contact__icon-link" href="javascript:void();"><Icon iconName="instagram" /></a> */}
+                <a className="Contact__icon-link" href="mailto:229465032@qq.com" target="_blank" rel="noopener noreferrer"><Icon iconName="email" /></a>
             </div>    
 		);
 	}

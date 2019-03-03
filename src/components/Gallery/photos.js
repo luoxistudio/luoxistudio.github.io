@@ -3,7 +3,7 @@ const PATH = './photos/group_';
 const groups = [
     {
         groupId: 0,
-        photoCount: 7
+        photoCount: 2
     },
     {
         groupId: 1,
