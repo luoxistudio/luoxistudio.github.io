@@ -24,6 +24,12 @@ html {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+//Avoid the jump effect for windows broswers when scroll bar shows or hides
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 .modal-open {
     overflow: hidden;
 }
