@@ -64,6 +64,10 @@ const groups = [
     {
         groupId: 15,
         photoCount: 11
+    },
+    {
+        groupId: 16,
+        photoCount: 9
     }
 ]
 
