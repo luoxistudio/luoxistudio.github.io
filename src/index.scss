@@ -1,91 +1,25 @@
 @charset "utf-8";
 
-// *********************
-// *** Normalize CSS ***
-// *********************
-
-@import "~normalize.css/normalize.css"; 
-
-// ************************
-// *** Global Variables ***
-// ************************
-
-$gray: #9B9B9B;
+@import './scss/vendors';
+@import './scss/variables';
 
 // *********************
 // *** Global Styles ***
 // *********************
 
-*, *::before, *:after {
-    box-sizing: border-box;
-}
-
-html {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-//Avoid the jump effect for windows broswers when scroll bar shows or hides
 body {
-    width: 100vw;
-    overflow-x: hidden;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $color-text-primary;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 .modal-open {
-    overflow: hidden;
+  overflow: hidden;
 }
-
-// ******************
-// *** Typography *** 
-// ******************
-
-
-// ******************
-// ***   Layout   ***
-// ******************
-
-$page-padding-sm: 16px;
-$page-padding-md: 40px;
-$page-padding-lg: 60px;
-
-@mixin bp-large {
-    @media only screen and (min-width: 1920px) {
-        @content;
-    }
-}
-
-@mixin bp-medium {
-    @media only screen and (min-width: 1200px) {
-        @content;
-    }
-}
-
-@mixin bp-small {
-    @media only screen and (min-width: 768px) {
-        @content;
-    }
-}
-
-@mixin bp-ex-small {
-    @media only screen and (min-width: 480px) {
-        @content;
-    }
-}
-
-// **********************
-// *** Global Modules ***
-// **********************
-
-@import "./styles/animation";
-
-// **********************
-// *** App Components ***
-// **********************
-
-@import "./components/Logo/Logo";
-@import "./components/Icon/Icon";
-
-@import "./components/App/App";
-@import "./components/Contact/Contact";
-@import "./components/Header/Header";
-@import "./components/Footer/Footer";
-@import "./components/Gallery/Gallery";

@@ -1,2 +1,2 @@
-import _default from './Logo';
-export { _default as default };
+import Logo from './Logo';
+export default Logo;

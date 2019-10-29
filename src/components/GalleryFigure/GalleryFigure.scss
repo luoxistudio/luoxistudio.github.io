@@ -1,0 +1,25 @@
+@charset "utf-8";
+@import '../../scss/variables';
+@import '../../scss//mixins';
+
+.GalleryFigure {
+  padding: $grid-small/2;
+  overflow: hidden;
+  & > img {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    opacity: 0;
+    filter: grayscale(100);
+    transform: scale(0.9);
+    transition: all 0.6s ease;
+    &.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+    @include hover-supported {
+      filter: grayscale(0);
+      transform: scale(1.02);
+    }
+  }
+}

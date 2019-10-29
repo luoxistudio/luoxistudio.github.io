@@ -1,2 +1,2 @@
-import _default from './Contact';
-export { _default as default };
+import Contact from './Contact';
+export default Contact;

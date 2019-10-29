@@ -1,2 +1,2 @@
-import _default from './Gallery';
-export { _default as default };
+import Gallery from './Gallery';
+export default Gallery;

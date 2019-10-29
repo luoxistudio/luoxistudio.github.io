@@ -1,0 +1,66 @@
+@charset "utf-8";
+@import '../../scss/variables';
+@import '../../scss//mixins';
+
+.App {
+  padding: 0 $grid-small;
+  transition: filter 0.3s ease;
+}
+
+.modal-open .App {
+  filter: blur(3px);
+}
+
+// Disble blur filter in firefox for performance reason
+@-moz-document url-prefix() {
+  .modal-open .App {
+    filter: blur(0px);
+  }
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2 * $grid-small 0;
+}
+
+.App-footer {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  margin-top: 4rem;
+  .Logo-icon {
+    fill: $color-text-secondary;
+    opacity: 0.6;
+  }
+}
+
+@include bp-small {
+  .App {
+    padding: 0 $grid-medium;
+  }
+  .App-header {
+    padding: $grid-medium 0;
+  }
+}
+
+@include bp-medium {
+  .App {
+    padding: 0 $grid-large;
+  }
+  .App-header {
+    padding: $grid-large 0;
+  }
+}
+
+@include bp-large {
+  .App {
+    padding: 0 $grid-xlarge;
+  }
+  .App-header {
+    padding: $grid-xlarge 0;
+  }
+}

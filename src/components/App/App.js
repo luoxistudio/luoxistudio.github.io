@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
-//import Typewriter from 'typewriter-effect/dist/core';
-import Header from '../Header';
+import './App.scss';
+import * as React from 'react';
 import Gallery from '../Gallery';
-import Footer from '../Footer';
+import Logo from '../Logo';
+import Nav from '../Nav';
 
-
-class App extends Component {
-	componentDidMount() {
-
-	}
-	render() {
-		return (
-			<div className="App">
-				<Header />
-				<Gallery />	
-				<Footer />
-			</div>
-		);
-	}
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <Logo />
+        <Nav />
+      </header>
+      <Gallery />
+      <footer className="App-footer">
+        <p>Designed by CHOUCHOU &copy; 2019</p>
+        <Logo size="small" withName={false} />
+      </footer>
+    </div>
+  );
 }
 
 export default App;

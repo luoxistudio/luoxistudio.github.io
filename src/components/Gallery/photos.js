@@ -1,4 +1,4 @@
-const PATH = "./photos/group_";
+const PATH = './photos/group_';
 
 const groups = [
   {
@@ -80,7 +80,9 @@ let photos = [];
 groups.forEach(group => {
   for (let i = 1; i <= group.photoCount; i++) {
     photos.push({
+      id: `${group.groupId}_${i}`,
       groupId: group.groupId,
+      title: `Photo ${group.groupId}_${i}`,
       url: `${PATH}${group.groupId}/${i}.jpg`
     });
   }

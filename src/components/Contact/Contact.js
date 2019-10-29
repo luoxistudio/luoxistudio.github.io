@@ -1,42 +1,40 @@
-import React, { Component } from "react";
-import Icon from "../Icon";
-import ReactGA from "react-ga";
+import './Contact.scss';
+import * as React from 'react';
+import icons from '../../lib/icons';
+import ReactGA from 'react-ga';
 
-class Contact extends Component {
+class Contact extends React.PureComponent {
   _handleContactClick = event => {
     const contactMethod = event.currentTarget.dataset.method;
     ReactGA.event({
-      category: "Contact",
-      action: "Click",
+      category: 'Contact',
+      action: 'Click',
       label: contactMethod
     });
   };
 
   render() {
-    const classes = this.props.className ? "Contact " + this.props.className : "Contact";
     return (
-      <div className={classes}>
+      <div className="Contact">
         <a
-          className="Contact__icon-link"
+          className="Contact-link"
+          data-method="Weibo"
           href="https://www.weibo.com/jeezu"
           target="_blank"
           rel="noopener noreferrer"
-          data-method="Weibo"
           onClick={this._handleContactClick}
         >
-          <Icon iconName="weibo" />
+          {icons.weibo}
         </a>
-        {/* <a className="Contact__icon-link" href="javascript:void();"><Icon iconName="wechat" /></a>
-                <a className="Contact__icon-link" href="javascript:void();"><Icon iconName="instagram" /></a> */}
         <a
-          className="Contact__icon-link"
+          className="Contact-link"
           data-method="Email"
           href="mailto:229465032@qq.com"
           target="_blank"
           rel="noopener noreferrer"
           onClick={this._handleContactClick}
         >
-          <Icon iconName="email" />
+          {icons.email}
         </a>
       </div>
     );

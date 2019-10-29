@@ -1,0 +1,39 @@
+@charset "utf-8";
+@import '../../scss/variables';
+@import '../../scss//mixins';
+
+.Contact {
+  display: flex;
+}
+
+.Contact-link {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid $color-text-secondary;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  transition: all 0.6s ease;
+  & > svg {
+    display: block;
+    width: 1.5rem;
+    fill: $color-text-secondary;
+    transition: all 0.6s ease;
+    &.weibo {
+      width: 1.6rem;
+    }
+    &.email {
+      width: 1.7rem;
+    }
+  }
+  @include hover-supported {
+    border: 2px solid $color-text-primary;
+    transform: translateY(-2px);
+    & > svg {
+      fill: $color-text-primary;
+    }
+  }
+  & + & {
+    margin-left: $grid-xsmall;
+  }
+}

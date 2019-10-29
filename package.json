@@ -1,37 +1,51 @@
 {
   "name": "luoxistudio.github.io",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Chouchou's photography portfolio",
+  "private": false,
   "dependencies": {
+    "body-scroll-lock": "^2.6.4",
+    "classnames": "^2.2.6",
     "imagesloaded": "^4.1.4",
     "masonry-layout": "^4.2.2",
-    "normalize.css": "^8.0.0",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "normalize.css": "^8.0.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "react-ga": "^2.7.0",
-    "react-scripts": "2.0.5",
-    "typewriter-effect": "^2.4.6"
+    "react-scripts": "3.1.1"
   },
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build -m 'Production build updates'",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "push": "gh-pages -b master -d build -m 'Production build updates'",
-    "deploy": "npm run build && npm run push",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "devDependencies": {
-    "gh-pages": "^2.0.1",
-    "node-sass": "^4.9.4"
+    "eslint": "^6.2.2",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "gh-pages": "^2.1.1",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.18.2"
   },
   "homepage": "."
 }
